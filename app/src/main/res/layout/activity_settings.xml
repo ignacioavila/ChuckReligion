@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ignacioavila.chuckreligion.SettingsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutJokesLoaded"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textViewJokesLoaded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/jokes_loaded"
+            android:textAppearance="?android:attr/textAppearanceLarge" >
+        </TextView>
+
+        <SeekBar
+            android:id="@+id/jokesLoadedProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewJokesLoaded"
+            android:layout_marginTop="26dp"
+            android:max="100" >
+        </SeekBar>
+
+        <TextView
+            android:id="@+id/txtJokesLoadedProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jokesLoadedProgress"
+            android:text="3" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/jokesLoadedfinalvalueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/jokesLoadedProgress"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/relativeLayoutforName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayoutJokesLoaded"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+
+    <LinearLayout
+        android:id="@+id/w"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtCheckName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left"
+            android:layout_weight="3" />
+
+
+        <CheckBox
+            android:id="@+id/checkName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_weight="1"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:hint="@string/name"/>
+
+        <EditText
+            android:id="@+id/editLastName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/lastname"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

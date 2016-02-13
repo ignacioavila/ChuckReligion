@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/row_padding"
+    android:paddingLeft="@dimen/padding_left_row"
+    android:paddingRight="@dimen/general_padding"
+    android:paddingTop="@dimen/row_padding">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/person_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:border_color="#FF000000"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/RowTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/person_photo"
+        android:layout_toRightOf="@+id/person_photo"
+        android:paddingLeft="@dimen/row_padding" />
+
+    <TextView
+        android:id="@+id/subtitleTextView"
+        style="@style/RowSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/titleTextView"
+        android:layout_alignStart="@+id/titleTextView"
+        android:layout_below="@+id/titleTextView"
+        android:paddingLeft="@dimen/row_padding" />
+
+</RelativeLayout>
